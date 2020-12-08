@@ -1,0 +1,55 @@
+{
+    "frontapi_查看应用健康度和应用单元健康度": {
+        "method": [[1,1]],
+        "api": ["/sat-web/frontapi/v1/application/health/list"],
+        "env": ["http://10.1.61.237"],
+        "key": [{"startTime":"2020-04-06 15:41:51","endTime":"2020-04-07 15:41:51","level":"1","id":"5e8557455fac0348e51d79bc"}],
+        "apikey": ["e10adc3949ba59abbe56e057f2gg88dd"],
+        "status_code": [0],
+        "des": "/sat-web/frontapi/v1/application/health/listr接口验证"},
+
+    "frontapi_服务健康度": {
+        "method": [[1,1]],
+        "api": ["/sat-web/frontapi/v1/application/5e8557455fac0348e51d79bc/service/health/list"],
+        "env": ["http://10.1.61.237"],
+        "key": [{"pageNum":1,"pageSize":10,"orderByParams":"lastTime desc","appId":"5e8557455fac0348e51d79bc","appUnitId":"5e8557595fac0348e51d79be"}],
+        "apikey": ["e10adc3949ba59abbe56e057f2gg88dd"],
+        "status_code": [0],
+        "des": "/sat-web/frontapi/v1/application/5e8557455fac0348e51d79bc/service/health/list接口验证"},
+
+    "openapi_根据appId获取应用的各个服务的平均响应时间": {
+        "method": [[2,2]],
+        "api": ["/sat-web/openapi/v1/appllication/5e8557455fac0348e51d79bc/getAppAvgResponTime"],
+        "env": ["http://10.1.61.237"],
+        "key": [{}],
+        "apikey": ["e10adc3949ba59abbe56e057f2gg88dd"],
+        "status_code": [0],
+        "des": "/sat-web/openapi/v1/appllication/5e8557455fac0348e51d79bc/getAppAvgResponTime接口验证"},
+
+      "根据appIds获取应用的健康度值、正常服务次数、异常服务次数": {
+        "method": [[2,2]],
+        "api": ["/sat-web/openapi/v1/appllication/getAppHealthByIds"],
+        "env": ["http://10.1.61.237"],
+        "key": [{"appIds":"5e8557455fac0348e51d79bc","startTime":1585731420000,"endTime":1585817820000,"apikey":"e10adc3949ba59abbe56e057f2gg88dd"}],
+        "apikey": ["e10adc3949ba59abbe56e057f2gg88dd"],
+        "status_code": [0],
+        "des": "/sat-web/openapi/v1/appllication/getAppHealthByIds接口验证"},
+
+      "查询系统内的全部业务应用及其应用单元列表": {
+        "method": [[2,2]],
+        "api": ["/sat-web/openapi/v1/application/list"],
+        "env": ["http://10.1.61.237"],
+        "key": [{"apikey":"e10adc3949ba59abbe56e057f2gg88dd"}],
+        "apikey": ["e10adc3949ba59abbe56e057f2gg88dd"],
+        "status_code": [0],
+        "des": "/sat-web/openapi/v1/application/list接口验证"},
+
+      "查询系统中全部的环境列表": {
+        "method": [[2,2]],
+        "api": ["/sat-web/openapi/v1/env/list"],
+        "env": ["http://10.1.61.237"],
+        "key": [{"apikey":"e10adc3949ba59abbe56e057f2gg88dd"}],
+        "apikey": ["e10adc3949ba59abbe56e057f2gg88dd"],
+        "status_code": [0],
+        "des": "/sat-web/openapi/v1/env/list接口验证"}
+}

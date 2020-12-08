@@ -1,0 +1,70 @@
+{
+    "frontapi_查看应用健康度和应用单元健康度": {
+        "method": [1],
+        "api": ["/sat-web/frontapi/v1/application/health/list"],
+        "env": ["http://10.1.61.237"],
+        "key": [{"startTime":"2020-04-06 15:41:51","endTime":"2020-04-07 15:41:51","level":"1","id":"5e8557455fac0348e51d79bc"}],
+        "apikey": ["'e10adc3949ba59abbe56e057f2gg88dd"],
+        "status_code": [0],
+        "des": "/sat-web/frontapi/v1/application/health/listr接口验证"},
+
+    "frontapi_服务健康度": {
+        "api": ["/api/v2/room/mic/up",
+                "/api/v2/room/mic/up/list",
+                "api/v2/room/mic/down",
+                "/api/v2/room/mic/up"],
+        "key": [{"roomNo": "TEST814680", "curOpType": 1, "needPushTypes": 1},
+                {"roomNo": "TEST814680", "type": 1},
+                {"roomNo": "TEST814680", "curOpType": 1, "needPushTypes": 1},
+                {"roomNo": "TEST814680", "curOpType": 1, "needPushTypes": 1}],
+        "token_choose": [1,1,1,1],
+        "status_code": [200,200,200,200],
+        "des": "/api/v2/room/mic/up和down接口验证，进入麦序和退出麦序的场景"},
+
+    "openapi_根据appId获取应用的各个服务的平均响应时间": {
+        "api": ["/api/v2/room/mic/hold-up",
+                "/api/v2/room/mic/hold-up"],
+        "key": [{"roomNo": "TEST814680", "userId": 519113, "type": 1},
+                {"roomNo": "TEST814680", "index": 2, "userId": 519123}],
+        "token_choose": [2,2],
+        "status_code": [200,200],
+        "des": "/api/v2/room/mic/hold-up接口验证,分别是抱用户上麦以及有权限的人自己上麦"},
+
+    "openapi_根据appIds获取应用的健康度值、正常服务次数、异常服务次数": {
+        "api": ["/api/v2/room/mic/hold-status",
+                "/api/v2/room/mic/hold-status",
+                "/api/v2/room/mic/hold-status"],
+        "key": [{"roomNo": "TEST814680", "index": 2, "status": -1, "userId": 519123},
+                {"roomNo": "TEST814680", "index": 2, "status": 1, "userId": 519123},
+                {"roomNo": "TEST814680", "index": 2, "status": 2, "userId": 519123}],
+        "token_choose": [2,2,2],
+        "status_code": [200,200,200],
+        "des": "/api/v2/room/mic/hold-status接口验证"},
+
+    "openapi_根据appIds获取应用的健康度值、正常服务次数、异常服务次数": {
+        "api": ["/api/v2/room/blacklist/handle",
+                "/api/v2/room/blacklist/handle"],
+        "key": [{"roomNo": "TEST814680", "userId": 519113, "flag": "true"},
+                {"roomNo": "TEST814680", "userId": 519113, "flag": "false"}],
+        "token_choose": [2,2],
+        "status_code": [200,200],
+        "des": "/api/v2/room/blacklist/handle接口验证,包含禁言和解禁言功能操作"},
+
+    "openapi_查询系统内的全部业务应用及其应用单元列表": {
+        "api": ["/api/v2/room/role/add",
+                "/api/v2/room/role/del"],
+        "key": [{"roomNo": "TEST814680", "userId": 519113, "role": 3},
+                {"roomNo": "TEST814680", "userId": 519113, "role": 3}],
+        "token_choose": [2,2],
+        "status_code": [200,200],
+        "des": "/api/v2/room/role/add和del接口验证,包含赋予马甲和解除马甲的操作"},
+
+    "openapi_查询系统中全部的环境列表": {
+        "api": ["/api/v2/room/banned",
+                "/api/v1/room/lift-ban"],
+        "key": [{"roomNo": "TEST814680", "userId": 519113},
+                {"roomNo": "TEST814680", "userId": 519113}],
+        "token_choose": [2,2],
+        "status_code": [200,200],
+        "des": "/api/v2/room/banned和lift-ban接口验证,包含封禁用户和解除封禁用户的操作"}
+}
